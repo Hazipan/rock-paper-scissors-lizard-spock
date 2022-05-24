@@ -1,0 +1,26 @@
+Goal: create a rock, paper, scissors, lizard, spock game using the following:
+    1. React
+    2. React Hooks
+    3. Redux
+    4. react-redux
+    5. SCSS
+
+Prerequisites:
+    - Learn React Hooks
+    - Review Redux and react-redux notes
+
+Design Outline:
+    - Show a pentagon with each of the five symbols resting at one of the points
+    - When a symbol is clicked, move to a different screen that plays out an animation to declare the winner
+        1. What you picked on the left, blank circle on the right
+        2. what the house picked appears on the right
+        3. Who wins is highlighted, space added between your choice and the houses, and the result is diplayed inbetween with a play again button
+    - Button to display the rules
+        - Rules pops up in the center of the screen with an 'X' button to make it disappear again
+            - On mobile, it takes up the entire screen
+        - When rules are diplayed, the rest of the app is darkened
+    - Score is tracked
+        - If you win, score goes up by one
+        - If you lose, score goes down by one
+        - If you refresh the page, score does not reset
+    
