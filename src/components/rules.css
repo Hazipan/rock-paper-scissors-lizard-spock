@@ -1,0 +1,31 @@
+.rulesScreen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rulesCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 30px 30px 30px;
+}
+
+.rulesHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.hideRules {
+    display: none;
+}
