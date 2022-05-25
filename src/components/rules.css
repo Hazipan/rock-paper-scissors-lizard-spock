@@ -1,7 +1,7 @@
 .rulesScreen {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(0, 0, 0, .7);
     z-index: 11;
     display: flex;
@@ -28,4 +28,21 @@
 
 .hideRules {
     display: none;
+}
+
+@media(max-width: 500px) {
+    .rulesCard {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rulesHeader {
+        position: absolute;
+        top: 10px;
+        gap: 70vw;
+    }
 }

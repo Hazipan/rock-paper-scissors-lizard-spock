@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
+:root {
+  font-size: 20px;
+}
+
 html {
   overflow: hidden;
 }
@@ -7,7 +11,7 @@ html {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -18,30 +22,60 @@ html {
 
 .header {
   border: 2px solid rgb(125, 128, 132);
-  border-radius: 20px;
+  border-radius: 1rem;
   padding: 15px;
   max-width: 700px;
-  width: 90%;
+  width: 80%;
   top: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  top: 20px;
+  margin-top: 20px;
+}
+
+.logo{
+  height: 6rem;
+  width: auto;
 }
 
 .pentagon {
   position: absolute;
   z-index: 0;
-  bottom: 100px;
+  top: 13.5rem;
+  width: 18rem;
+  height: auto;
+}
+
+/* button pentagonal positioning */
+.pentaTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.pentaMiddle {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin: 0 0 1.5rem 0;
+}
+.pentaBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
 }
 
 /* ---------- Button Styles ---------- */
 /* outter button ring */
 .buttonBorder {
-  width: 145px;
-  height: 145px;
+  width: 7.25rem;
+  height: 7.25rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -56,22 +90,27 @@ html {
   background: white;
   border-radius: 50%;
   border: none;
-  width: 105px;
-  height: 98px;
+  width: 5.25rem;
+  height: 4.9rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 -7px lightgray;
-  margin-top: 8.5px;
+  box-shadow: 0 -0.35rem lightgray;
+  margin-top: .425rem;
   z-index: 2;
+}
+
+.button img{
+  width: 2.7rem;
+  height: auto;
 }
 
 /* Psuedo Button (invisible) to spread onClick and hover state across the whole visual */
 .psuedoButton {
   position: absolute;
-  width: 145px;
-  height: 150px;
+  width: 7.25rem;
+  height: 7.5rem;
   opacity: 0;
   border: none;
   border-radius: 50%;
@@ -83,66 +122,37 @@ html {
 /* colors for button rings */
 .rock {
   background-image: linear-gradient(hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
-  box-shadow: 0 5px hsl(349deg, 61%, 42%);
+  box-shadow: 0 0.25rem hsl(349deg, 61%, 42%);
 }
 .paper {
   background-image: linear-gradient(hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
-  box-shadow: 0 5px hsl(230deg, 79%, 52%);
+  box-shadow: 0 0.25rem hsl(230deg, 79%, 52%);
 }
 .scissors {
   background-image: linear-gradient(hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
-  box-shadow: 0 5px hsl(39deg, 79%, 39%);
+  box-shadow: 0 0.25rem hsl(39deg, 79%, 39%);
   z-index: 3;
 }
 .lizard {
   background-image: linear-gradient(hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
-  box-shadow: 0 5px hsl(261deg, 63%, 50%);
+  box-shadow: 0 0.25rem hsl(261deg, 63%, 50%);
 }
 .spock {
   background-image: linear-gradient(hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
-  box-shadow: 0 5px hsl(189deg, 49%, 43%);
-}
-
-/* button pentagonal positioning */
-.pentaContainer {
-  position: absolute;
-  bottom: 20px;
-}
-.pentaTop {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.pentaMiddle {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 200px;
-  margin: 0 0 30px 0;
-}
-.pentaBottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 75px;
-  margin-bottom: 20px;
+  box-shadow: 0 0.25rem hsl(189deg, 49%, 43%);
 }
 
 /* rules Button */
 .rulesButton {
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  bottom: 2.5rem;
+  right: 2.5rem;
   background-color: rgba(0, 0, 0, 0);
-  border: 2px solid white;
+  border: 0.1rem solid white;
   color: white;
   border-radius: 10px;
-  padding: 10px 35px;
-  font-size: 18px;
+  padding: 0.5rem 1.75rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 .rulesButton:hover {
@@ -151,17 +161,24 @@ html {
 }
 
 @media(max-width: 700px) {
-  .logo {
-    height: 75px;
-  }
-
   .rulesButton {
-    font-size: 12px;
-    padding: 5px 20px;
-    bottom: 500px;
+    bottom: 22rem;
   }
 }
 
 @media(max-width: 500px) {
-  
+  :root {
+    font-size: 12px;
+  }
+
+  .pentagon {
+    top: 15rem; 
+  }
+
+  .rulesButton {
+    position: initial;
+    margin-top: 50px;
+    font-size: 1.6rem;
+    padding: 1rem 2.25rem;
+  }
 }

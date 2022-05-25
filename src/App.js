@@ -160,11 +160,11 @@ class App extends React.Component {
           <div class='results'>
             <div class='result'>
               <p>YOU PICKED</p>
-              <ResultButton src={this.state.playerSrc} symbol={this.state.playerSymbol} party=' player' winner={this.state.win}/>
+              <ResultButton src={this.state.playerSrc} symbol={this.state.playerSymbol} party=' player' winner={this.state.win} />
             </div>
             <div class='result'>
               <p>THE HOUSE PICKED</p>
-              <ResultButton src={this.state.houseSrc} symbol={this.state.houseSymbol} party=' house' winner={!this.state.win}/>
+              <ResultButton src={this.state.houseSrc} symbol={this.state.houseSymbol} party=' house' winner={!this.state.win} />
             </div>
           </div>
           <div class='resultMessage'>
@@ -181,18 +181,16 @@ class App extends React.Component {
             <Score value={this.state.score} />
           </header>
           <img src={pentagon} alt='' className='pentagon' />
-          <div className='pentaContainer'>
-            <div className='pentaTop'>
-              <Button src={scissors} symbol='scissors' onClick={this.handleClick} />
-            </div>
-            <div className='pentaMiddle'>
-              <Button src={spock} symbol='spock' onClick={this.handleClick} />
-              <Button src={paper} symbol='paper' onClick={this.handleClick} />
-            </div>
-            <div className='pentaBottom'>
-              <Button src={lizard} symbol='lizard' onClick={this.handleClick} />
-              <Button src={rock} symbol='rock' onClick={this.handleClick} />
-            </div>
+          <div className='pentaTop'>
+            <Button src={scissors} symbol='scissors' onClick={this.handleClick} />
+          </div>
+          <div className='pentaMiddle'>
+            <Button src={spock} symbol='spock' onClick={this.handleClick} />
+            <Button src={paper} symbol='paper' onClick={this.handleClick} />
+          </div>
+          <div className='pentaBottom'>
+            <Button src={lizard} symbol='lizard' onClick={this.handleClick} />
+            <Button src={rock} symbol='rock' onClick={this.handleClick} />
           </div>
           <button className='rulesButton' onClick={this.rulesOpen}>RULES</button>
           <Rules rules={rules} close={close} onClick={this.rulesClose} />
