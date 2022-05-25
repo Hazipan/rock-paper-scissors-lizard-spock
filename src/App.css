@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+html {
+  overflow: hidden;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -8,11 +13,11 @@
   height: 100vh;
   background-image: radial-gradient(circle at top, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
   font-family: "Barlow Semi Condensed", sans-serif;
-  /* Button border colors by symbol */
-  /* Button positioning */
+  position: relative;
 }
-.App .header {
-  border: 2px solid hsl(217deg, 16%, 45%);
+
+.header {
+  border: 2px solid rgb(125, 128, 132);
   border-radius: 20px;
   padding: 15px;
   max-width: 700px;
@@ -22,13 +27,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 20px;
 }
-.App .pentagon {
+
+.pentagon {
   position: absolute;
   z-index: 0;
   bottom: 100px;
 }
-.App .buttonBorder {
+
+/* ---------- Button Styles ---------- */
+/* outter button ring */
+.buttonBorder {
   width: 145px;
   height: 145px;
   display: flex;
@@ -37,10 +48,11 @@
   align-items: center;
   border-radius: 50%;
   border: none;
-  z-index: 1;
-  /* Inner button style */
+  z-index: 2;
 }
-.App .buttonBorder .button {
+
+/* inner button area */
+.button {
   background: white;
   border-radius: 50%;
   border: none;
@@ -52,10 +64,11 @@
   align-items: center;
   box-shadow: 0 -7px lightgray;
   margin-top: 8.5px;
-  z-index: 1;
-  /* Psuedo Button (invisible) to spread onClick and hover state across the whole visual */
+  z-index: 2;
 }
-.App .buttonBorder .button .psuedoButton {
+
+/* Psuedo Button (invisible) to spread onClick and hover state across the whole visual */
+.psuedoButton {
   position: absolute;
   width: 145px;
   height: 150px;
@@ -63,38 +76,46 @@
   border: none;
   border-radius: 50%;
 }
-.App .buttonBorder .button .psuedoButton:hover {
+.psuedoButton:hover {
   cursor: pointer;
 }
-.App .rock {
+
+/* colors for button rings */
+.rock {
   background-image: linear-gradient(hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
   box-shadow: 0 5px hsl(349deg, 61%, 42%);
 }
-.App .paper {
+.paper {
   background-image: linear-gradient(hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
   box-shadow: 0 5px hsl(230deg, 79%, 52%);
 }
-.App .scissors {
+.scissors {
   background-image: linear-gradient(hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
   box-shadow: 0 5px hsl(39deg, 79%, 39%);
   z-index: 3;
 }
-.App .lizard {
+.lizard {
   background-image: linear-gradient(hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
   box-shadow: 0 5px hsl(261deg, 63%, 50%);
 }
-.App .spock {
+.spock {
   background-image: linear-gradient(hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
-  box-shadow: hsl(189deg, 49%, 43%);
+  box-shadow: 0 5px hsl(189deg, 49%, 43%);
 }
-.App .pentaTop {
+
+/* button pentagonal positioning */
+.pentaContainer {
+  position: absolute;
+  bottom: 20px;
+}
+.pentaTop {
   margin-top: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.App .pentaMiddle {
+.pentaMiddle {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,7 +123,7 @@
   gap: 200px;
   margin: 0 0 30px 0;
 }
-.App .pentaBottom {
+.pentaBottom {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -110,7 +131,9 @@
   gap: 75px;
   margin-bottom: 20px;
 }
-.App .rulesButton {
+
+/* rules Button */
+.rulesButton {
   position: absolute;
   bottom: 50px;
   right: 50px;
@@ -122,9 +145,23 @@
   font-size: 18px;
   font-weight: 600;
 }
-.App .rulesButton:hover {
+.rulesButton:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/*# sourceMappingURL=App.css.map */
+@media(max-width: 700px) {
+  .logo {
+    height: 75px;
+  }
+
+  .rulesButton {
+    font-size: 12px;
+    padding: 5px 20px;
+    bottom: 500px;
+  }
+}
+
+@media(max-width: 500px) {
+  
+}

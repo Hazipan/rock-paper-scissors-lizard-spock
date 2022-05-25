@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+.Results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: radial-gradient(circle at top, hsl(214deg, 47%, 23%), hsl(237deg, 49%, 15%));
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: white;
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.result p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  z-index: 10;
+}
+
+.resultButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.resultButton {
+  /*
+  width: 145px;
+  height: 145px;
+  */
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  z-index: 2;
+  opacity: 0;
+}
+
+.resultButton div {
+  background: white;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  width: 155px;
+  height: 146px;
+  box-shadow: 0 -8px lightgray;
+  margin-top: 8px;
+  z-index: 3;
+}
+
+.resultButton div img {
+  width: 75px;
+  height: auto;
+}
+
+.buttonShadow {
+  position: absolute;
+  height: 155px;
+  width: 155px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: .2;
+  z-index: 1;
+}
+
+.winner {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  background-image: radial-gradient(hsl(0, 0%, 50%) 20%, hsl(0, 0%, 50%) 50%, hsl(0, 0%, 30%) 50%, hsl(0, 0%, 30%) 60%, hsl(0, 0%, 20%) 50%);
+  opacity: .1;
+  z-index: 1;
+}
+
+.resultMessage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 35vh;
+  opacity: 0;
+  animation-duration: 5s;
+  animation-name: messageFadeIn;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+
+.winMessage {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.playAgain {
+  border: none;
+  font-size: 14px;
+  padding: 12px 40px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: hsl(229, 25%, 31%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 0;
+}
+
+.playAgain:hover {
+  cursor: pointer;
+}
+
+@media(min-width: 700px) {
+  .winner {
+    animation-duration: 5s;
+    animation-name: highlightFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .house {
+    animation-duration: 5s;
+    animation-name: houseFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .player {
+    animation-duration: 5s;
+    animation-name: playerFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .results {
+    animation-duration: 5s;
+    animation-name: spread;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes playerFadeIn {
+    0% {opacity: 0}
+    20% {opacity: 1}
+    100% {opacity: 1}
+  }
+
+  @keyframes houseFadeIn {
+    0% {opacity: 0}
+    20% {opacity: 0}
+    40% {opacity: 1}
+    100% {opacity: 1}
+  }
+
+  @keyframes spread {
+    0% {gap: 50px}
+    40% {gap: 50px}
+    60% {gap: 300px}
+    100% {gap: 300px}
+  }
+
+  @keyframes messageFadeIn {
+    0% {opacity: 0}
+    60% {opacity: 0}
+    80% {opacity: 1}
+    100% {opacity: 1}
+  }
+
+  @keyframes highlightFadeIn {
+    0% {opacity: 0}
+    60% {opacity: 0}
+    80% {opacity: .1}
+    100% {opacity: .1}
+  }
+}
+
+@media(max-width: 700px) {
+  .winner {
+    animation-duration: 5s;
+    animation-name: highlightFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .house {
+    animation-duration: 5s;
+    animation-name: houseFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  .player {
+    animation-duration: 5s;
+    animation-name: playerFadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes playerFadeIn {
+    0% {opacity: 0}
+    20% {opacity: 1}
+    100% {opacity: 1}
+  }
+
+  @keyframes houseFadeIn {
+    0% {opacity: 0}
+    20% {opacity: 0}
+    40% {opacity: 1}
+    100% {opacity: 1}
+  }
+  @keyframes messageFadeIn {
+    0% {opacity: 0; transform: translate(0);}
+    40% {opacity: 0; transform: translate(0);}
+    60% {opacity: 1; transform: translate(0, 200px);}
+    100% {opacity: 1; transform: translate(0, 200px);}
+  }
+
+  @keyframes highlightFadeIn {
+    0% {opacity: 0}
+    40% {opacity: 0}
+    60% {opacity: .1}
+    100% {opacity: .1}
+  }
+
+  .results {
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  @keyframes messageFadeIn {
+    0% {opacity: 0; transform: translate(0);}
+    40% {opacity: 0; transform: translate(0);}
+    60% {opacity: 1; transform: translate(0, 150px);}
+    100% {opacity: 1; transform: translate(0, 150px);}
+  }
+
+  .resultButton {
+    width: 145px;
+    height: 145px;
+  }
+
+  .resultButton div {
+    width: 105px;
+    height: 98px;
+    box-shadow: 0 -7px lightgray;
+    margin-top: 8.5px;
+  }
+
+  .resultButton div img {
+    height: initial;
+    width: auto;
+  }
+
+  .winner {
+    width: 300px;
+    height: 300px;
+  }
+
+  .results {
+    gap: 20px;
+  }
+
+  .result p {
+    font-size: 14px;
+  }
+}
