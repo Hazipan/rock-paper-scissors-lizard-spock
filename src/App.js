@@ -128,11 +128,13 @@ class App extends React.Component {
         didWin = false;
     }
 
+    // Tie conditonal
     if (pcChoice === event.target.value) {
       point = 0;
       result = 'IT\'S A TIE';
     }
 
+    // Update state accordingly
     this.setState({
       prevScore: this.state.score,
       score: this.state.score + point,
@@ -145,12 +147,14 @@ class App extends React.Component {
       winMessage: result
     });
 
+    // Add score animation when moving to the results screen
     document.getElementById('score').classList.add('scoreAnimation');
     document.getElementById('prevScore').classList.add('prevScoreAnimation');
   }
 
   playAgain() {
     this.setState({ choiceMade: false });
+    // Remove score animation when moving back to main screen
     document.getElementById('score').classList.remove('scoreAnimation');
     document.getElementById('prevScore').classList.remove('prevScoreAnimation');
   }
@@ -159,6 +163,7 @@ class App extends React.Component {
   render() {
     if (this.state.choiceMade) {
       return (
+        // Results screen
         <div className="Results">
           <header className='header' >
             <img src={logo} alt='logo' className='logo' />
@@ -182,6 +187,7 @@ class App extends React.Component {
       )
     } else {
       return (
+        // Main screen
         <div className="App">
           <header className='header' >
             <img src={logo} alt='logo' className='logo' />
