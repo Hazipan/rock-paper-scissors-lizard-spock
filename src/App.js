@@ -193,17 +193,18 @@ class App extends React.Component {
             <img src={logo} alt='logo' className='logo' />
             <Score value={this.state.score} />
           </header>
-          <img src={pentagon} alt='' className='pentagon' />
-          <div className='pentaTop'>
-            <Button src={scissors} symbol='scissors' onClick={this.handleClick} />
-          </div>
-          <div className='pentaMiddle'>
-            <Button src={spock} symbol='spock' onClick={this.handleClick} />
-            <Button src={paper} symbol='paper' onClick={this.handleClick} />
-          </div>
-          <div className='pentaBottom'>
-            <Button src={lizard} symbol='lizard' onClick={this.handleClick} />
-            <Button src={rock} symbol='rock' onClick={this.handleClick} />
+          <div className='pentaContainer'>
+            <div className='pentaTop'>
+              <Button src={scissors} symbol='scissors' onClick={this.handleClick} />
+            </div>
+            <div className='pentaMiddle'>
+              <Button src={spock} symbol='spock' onClick={this.handleClick} />
+              <Button src={paper} symbol='paper' onClick={this.handleClick} />
+            </div>
+            <div className='pentaBottom'>
+              <Button src={lizard} symbol='lizard' onClick={this.handleClick} />
+              <Button src={rock} symbol='rock' onClick={this.handleClick} />
+            </div>
           </div>
           <button className='rulesButton' onClick={this.rulesOpen}>RULES</button>
           <Rules rules={rules} close={close} onClick={this.rulesClose} />

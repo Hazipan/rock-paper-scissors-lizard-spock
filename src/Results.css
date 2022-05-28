@@ -3,7 +3,7 @@
 .Results {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -16,8 +16,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5rem;
   gap: 2.5rem;
+  margin-bottom: 40vh;
 }
 
 .result {
@@ -62,11 +62,10 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  
   width: 7.75rem;
   height: 7.3rem;
   box-shadow: 0 -0.4rem lightgray;
-  margin-top: 0.4rem;
+  margin-top: 10px;
   z-index: 3;
 }
 
@@ -117,8 +116,8 @@
 
 .playAgain {
   border: none;
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 1.2rem;
+  padding: .5rem 1rem;
   border-radius: 0.25rem;
   font-weight: 600;
   color: hsl(229, 25%, 31%);
@@ -224,8 +223,8 @@
   @keyframes messageFadeIn {
     0% {opacity: 0; transform: translate(0);}
     40% {opacity: 0; transform: translate(0);}
-    60% {opacity: 1; transform: translate(0, 10rem);}
-    100% {opacity: 1; transform: translate(0, 10rem);}
+    60% {opacity: 1; transform: translate(0, 6rem);}
+    100% {opacity: 1; transform: translate(0, 6rem);}
   }
 
   @keyframes highlightFadeIn {
@@ -250,6 +249,11 @@
   }
 
   .winMessage {
-    margin-top: 60px;
+    margin-top: 150%;
+  }
+
+  .playAgain {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }

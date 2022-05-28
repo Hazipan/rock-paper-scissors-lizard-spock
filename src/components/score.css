@@ -31,7 +31,11 @@
     margin: 0;
     color: hsl(229, 25%, 31%);
     position: absolute;
-    top: 58px;
+    top: 73px;
+}
+
+@media(max-width: 500px) {
+    .prevScore{top: 58px;}
 }
 
 .scoreAnimation {

@@ -11,7 +11,7 @@ html {
 .App {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   height: 100vh;
@@ -31,7 +31,7 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .logo{
@@ -39,21 +39,20 @@ html {
   width: auto;
 }
 
-.pentagon {
-  position: absolute;
-  z-index: 0;
-  top: 13.5rem;
-  width: 18rem;
-  height: auto;
+/* button pentagonal positioning */
+.pentaContainer {
+  background-image: url('./images/bg-pentagon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  margin-bottom: 15%;
 }
 
-/* button pentagonal positioning */
 .pentaTop {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
 }
 .pentaMiddle {
   display: flex;
@@ -171,13 +170,10 @@ html {
     font-size: 12px;
   }
 
-  .pentagon {
-    top: 15rem; 
-  }
 
   .rulesButton {
     position: initial;
-    margin-top: 50px;
+    margin-bottom: 20px;
     font-size: 1.6rem;
     padding: 1rem 2.25rem;
   }
