@@ -22,6 +22,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       score: 0,
+      prevScore: 0,
       choiceMade: false,
       win: false,
       // String references for class names
@@ -133,6 +134,7 @@ class App extends React.Component {
     }
 
     this.setState({
+      prevScore: this.state.score,
       score: this.state.score + point,
       choiceMade: true,
       playerSymbol: event.target.value,
@@ -142,10 +144,15 @@ class App extends React.Component {
       houseSrc: pcSymbol,
       winMessage: result
     });
+
+    document.getElementById('score').classList.add('scoreAnimation');
+    document.getElementById('prevScore').classList.add('prevScoreAnimation');
   }
 
   playAgain() {
     this.setState({ choiceMade: false });
+    document.getElementById('score').classList.remove('scoreAnimation');
+    document.getElementById('prevScore').classList.remove('prevScoreAnimation');
   }
 
 
@@ -155,7 +162,7 @@ class App extends React.Component {
         <div className="Results">
           <header className='header' >
             <img src={logo} alt='logo' className='logo' />
-            <Score value={this.state.score} />
+            <Score value={this.state.score} prevValue={this.state.prevScore} />
           </header>
           <div class='results'>
             <div class='result'>

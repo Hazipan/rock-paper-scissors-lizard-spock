@@ -42,10 +42,6 @@
 }
 
 .resultButton {
-  /*
-  width: 145px;
-  height: 145px;
-  */
   width: 10rem;
   height: 10rem;
   display: flex;
@@ -121,8 +117,8 @@
 
 .playAgain {
   border: none;
-  font-size: 0.7rem;
-  padding: 0.6rem 2rem;
+  font-size: 14px;
+  padding: 10px 20px;
   border-radius: 0.25rem;
   font-weight: 600;
   color: hsl(229, 25%, 31%);
@@ -241,5 +237,19 @@
 
   .results {
     margin-top: 0;
+  }
+}
+
+@media(max-width: 500px) {
+  .results {
+    margin-top: 40px;
+  }
+
+  .results p {
+    font-size: 14px;
+  }
+
+  .winMessage {
+    margin-top: 60px;
   }
 }

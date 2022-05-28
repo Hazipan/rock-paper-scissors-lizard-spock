@@ -23,3 +23,37 @@
     margin: 0;
     color: hsl(229, 25%, 31%);
 }
+
+.prevScore {
+    opacity: 0;
+    font-weight: 700;
+    font-size: 2.9rem;
+    margin: 0;
+    color: hsl(229, 25%, 31%);
+    position: absolute;
+    top: 58px;
+}
+
+.scoreAnimation {
+    animation-name: scoreFadeIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.prevScoreAnimation {
+    animation-name: prevScoreFadeOut;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scoreFadeIn {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes prevScoreFadeOut {
+    0% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}

@@ -40,9 +40,14 @@
         align-items: center;
     }
 
+    .rulesCard img {
+        width:100%;
+        height: auto;
+    }
+
     .rulesHeader {
         position: absolute;
         top: 10px;
-        gap: 70vw;
+        gap: 65vw;
     }
 }
