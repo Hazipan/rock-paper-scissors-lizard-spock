@@ -189,6 +189,12 @@
   }
 }
 
+@media(min-width: 500px) {
+  .results {
+    margin-bottom: 30vh;
+  }
+}
+
 @media(max-width: 700px) {
   .winner {
     animation-duration: 5s;
@@ -232,10 +238,6 @@
     40% {opacity: 0}
     60% {opacity: .1}
     100% {opacity: .1}
-  }
-
-  .results {
-    margin-top: 0;
   }
 }
 

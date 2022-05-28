@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import './Results.css';
 // Image imports
-import pentagon from './images/bg-pentagon.svg';
 import logo from './images/logo-bonus.svg';
 import rock from './images/icon-rock.svg';
 import paper from './images/icon-paper.svg';
