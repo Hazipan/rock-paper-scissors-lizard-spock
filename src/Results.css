@@ -100,7 +100,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 16.5rem;
+  bottom: 40vh;
   opacity: 0;
   animation-duration: 5s;
   animation-name: messageFadeIn;
@@ -155,37 +155,89 @@
   }
 
   @keyframes playerFadeIn {
-    0% {opacity: 0}
-    20% {opacity: 1}
-    100% {opacity: 1}
+    0% {
+      opacity: 0
+    }
+
+    20% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 1
+    }
   }
 
   @keyframes houseFadeIn {
-    0% {opacity: 0}
-    20% {opacity: 0}
-    40% {opacity: 1}
-    100% {opacity: 1}
+    0% {
+      opacity: 0
+    }
+
+    20% {
+      opacity: 0
+    }
+
+    40% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 1
+    }
   }
 
   @keyframes spread {
-    0% {gap: 2.5rem}
-    40% {gap: 2.5rem}
-    60% {gap: 15rem}
-    100% {gap: 15rem}
+    0% {
+      gap: 2.5rem
+    }
+
+    40% {
+      gap: 2.5rem
+    }
+
+    60% {
+      gap: 15rem
+    }
+
+    100% {
+      gap: 15rem
+    }
   }
 
   @keyframes messageFadeIn {
-    0% {opacity: 0}
-    60% {opacity: 0}
-    80% {opacity: 1}
-    100% {opacity: 1}
+    0% {
+      opacity: 0
+    }
+
+    60% {
+      opacity: 0
+    }
+
+    80% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 1
+    }
   }
 
   @keyframes highlightFadeIn {
-    0% {opacity: 0}
-    60% {opacity: 0}
-    80% {opacity: .1}
-    100% {opacity: .1}
+    0% {
+      opacity: 0
+    }
+
+    60% {
+      opacity: 0
+    }
+
+    80% {
+      opacity: .1
+    }
+
+    100% {
+      opacity: .1
+    }
   }
 }
 
@@ -215,29 +267,75 @@
   }
 
   @keyframes playerFadeIn {
-    0% {opacity: 0}
-    20% {opacity: 1}
-    100% {opacity: 1}
+    0% {
+      opacity: 0
+    }
+
+    20% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 1
+    }
   }
 
   @keyframes houseFadeIn {
-    0% {opacity: 0}
-    20% {opacity: 0}
-    40% {opacity: 1}
-    100% {opacity: 1}
+    0% {
+      opacity: 0
+    }
+
+    20% {
+      opacity: 0
+    }
+
+    40% {
+      opacity: 1
+    }
+
+    100% {
+      opacity: 1
+    }
   }
+
   @keyframes messageFadeIn {
-    0% {opacity: 0; transform: translate(0);}
-    40% {opacity: 0; transform: translate(0);}
-    60% {opacity: 1; transform: translate(0, 6rem);}
-    100% {opacity: 1; transform: translate(0, 6rem);}
+    0% {
+      opacity: 0;
+      transform: translate(0);
+    }
+
+    40% {
+      opacity: 0;
+      transform: translate(0);
+    }
+
+    60% {
+      opacity: 1;
+      transform: translate(0, 6rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 6rem);
+    }
   }
 
   @keyframes highlightFadeIn {
-    0% {opacity: 0}
-    40% {opacity: 0}
-    60% {opacity: .1}
-    100% {opacity: .1}
+    0% {
+      opacity: 0
+    }
+
+    40% {
+      opacity: 0
+    }
+
+    60% {
+      opacity: .1
+    }
+
+    100% {
+      opacity: .1
+    }
   }
 }
 

@@ -31,11 +31,11 @@ html {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
-.logo{
-  height: 6rem;
+.logo {
+  height: 4.5rem;
   width: auto;
 }
 
@@ -54,6 +54,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .pentaMiddle {
   display: flex;
   flex-direction: row;
@@ -62,6 +63,7 @@ html {
   gap: 10rem;
   margin: 0 0 1.5rem 0;
 }
+
 .pentaBottom {
   display: flex;
   flex-direction: row;
@@ -100,7 +102,7 @@ html {
   z-index: 2;
 }
 
-.button img{
+.button img {
   width: 2.7rem;
   height: auto;
 }
@@ -114,6 +116,7 @@ html {
   border: none;
   border-radius: 50%;
 }
+
 .psuedoButton:hover {
   cursor: pointer;
 }
@@ -123,19 +126,23 @@ html {
   background-image: linear-gradient(hsl(349deg, 70%, 56%), hsl(349deg, 71%, 52%));
   box-shadow: 0 0.25rem hsl(349deg, 61%, 42%);
 }
+
 .paper {
   background-image: linear-gradient(hsl(230deg, 89%, 65%), hsl(230deg, 89%, 62%));
   box-shadow: 0 0.25rem hsl(230deg, 79%, 52%);
 }
+
 .scissors {
   background-image: linear-gradient(hsl(40deg, 84%, 53%), hsl(39deg, 89%, 49%));
   box-shadow: 0 0.25rem hsl(39deg, 79%, 39%);
   z-index: 3;
 }
+
 .lizard {
   background-image: linear-gradient(hsl(261deg, 72%, 63%), hsl(261deg, 73%, 60%));
   box-shadow: 0 0.25rem hsl(261deg, 63%, 50%);
 }
+
 .spock {
   background-image: linear-gradient(hsl(189deg, 58%, 57%), hsl(189deg, 59%, 53%));
   box-shadow: 0 0.25rem hsl(189deg, 49%, 43%);
@@ -154,6 +161,7 @@ html {
   font-size: 0.9rem;
   font-weight: 600;
 }
+
 .rulesButton:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
@@ -170,10 +178,14 @@ html {
     font-size: 12px;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
 
   .rulesButton {
     position: initial;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     font-size: 1.6rem;
     padding: 1rem 2.25rem;
   }
