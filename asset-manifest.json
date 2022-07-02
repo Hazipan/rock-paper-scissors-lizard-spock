@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rock-paper-scissors-lizard-spock/static/css/main.b5fe38c3.css",
+    "main.css": "/rock-paper-scissors-lizard-spock/static/css/main.23789a42.css",
     "main.js": "/rock-paper-scissors-lizard-spock/static/js/main.1ddee475.js",
     "static/js/787.24e64024.chunk.js": "/rock-paper-scissors-lizard-spock/static/js/787.24e64024.chunk.js",
     "static/media/logo-bonus.svg": "/rock-paper-scissors-lizard-spock/static/media/logo-bonus.9bf8aeb80c2526dee7c67aa5c1b74ccc.svg",
@@ -13,12 +13,12 @@
     "static/media/icon-rock.svg": "/rock-paper-scissors-lizard-spock/static/media/icon-rock.476e90a9646a87bb3645d2f09f4f7fba.svg",
     "static/media/icon-close.svg": "/rock-paper-scissors-lizard-spock/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
     "static/media/bg-pentagon.svg": "/rock-paper-scissors-lizard-spock/static/media/bg-pentagon.1ad6d36532b75eb7d82c.svg",
-    "main.b5fe38c3.css.map": "/rock-paper-scissors-lizard-spock/static/css/main.b5fe38c3.css.map",
+    "main.23789a42.css.map": "/rock-paper-scissors-lizard-spock/static/css/main.23789a42.css.map",
     "main.1ddee475.js.map": "/rock-paper-scissors-lizard-spock/static/js/main.1ddee475.js.map",
     "787.24e64024.chunk.js.map": "/rock-paper-scissors-lizard-spock/static/js/787.24e64024.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5fe38c3.css",
+    "static/css/main.23789a42.css",
     "static/js/main.1ddee475.js"
   ]
 }
