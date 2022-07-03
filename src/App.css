@@ -178,10 +178,6 @@ html {
     font-size: 12px;
   }
 
-  html {
-    overflow-x: hidden;
-  }
-
 
   .rulesButton {
     position: initial;

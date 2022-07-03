@@ -16,11 +16,15 @@ import Button from './components/Button.js';
 import Rules from './components/Rules.js';
 import ResultButton from './components/ResultButton';
 
+function storeScore(score) {
+  localStorage.setItem('score', score);
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      score: 0,
+      score: localStorage.getItem('score') || 0,
       prevScore: 0,
       choiceMade: false,
       win: false,
@@ -136,7 +140,7 @@ class App extends React.Component {
     // Update state accordingly
     this.setState({
       prevScore: this.state.score,
-      score: this.state.score + point,
+      score: Number(this.state.score) + point,
       choiceMade: true,
       playerSymbol: event.target.value,
       houseSymbol: pcChoice,
@@ -149,6 +153,8 @@ class App extends React.Component {
     // Add score animation when moving to the results screen
     document.getElementById('score').classList.add('scoreAnimation');
     document.getElementById('prevScore').classList.add('prevScoreAnimation');
+
+    storeScore(this.state.score + point);
   }
 
   playAgain() {
